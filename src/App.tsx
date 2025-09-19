@@ -2,9 +2,7 @@ import { lazy } from "react"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Register from "./pages/auth/register"
 import AuthProvider from "./contexts/AuthContext"
-// import PredictorPage from "./pages/account/predictor"
 import Predict from "./pages/account/predict"
-import PredictorPage from "./pages/account/predictor"
 const Login = lazy(() => import('./pages/auth/login'))
 
 function App() {
@@ -17,7 +15,6 @@ function App() {
                   <Route path='/' element={<Predict />} />
                   <Route path='/login' element={<Login />} />
                   <Route path='/register' element={<Register />} />
-                  <Route path='/predict' element={<PredictorPage />} />
               </Routes>
             </div>
         </AuthProvider>
