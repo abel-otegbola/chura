@@ -106,7 +106,7 @@ export default function Predict() {
 
                                 <form onSubmit={handleSubmit} className="flex flex-col w-full overflow-x-hidden gap-6 ">
                                     <div className={`flex w-[480%] gap-[5.5%] overflow-hidden`}>
-                                        <div className={`w-[80%] flex flex-col gap-5 py-2 duration-500 ${flow === 0 ? "translate-x-[0]" : "translate-x-[-480%]"}`}>
+                                        <div className={`w-[80%] flex flex-col gap-5 py-2 transition-all duration-500 ${flow === 0 ? "translate-x-[0]" : "translate-x-[-480%]"}`}>
                                             <div className="flex flex-col gap-1">
                                                 <label className="font-bold text-[12px]">
                                                     What crop are you storing?
@@ -148,7 +148,7 @@ export default function Predict() {
                                                 />
                                             </div>
                                         </div>
-                                        <div className={`w-[80%] flex flex-col gap-5 duration-500 ${flow === 1 ? "translate-x-[-126.25%]" : flow < 1 ? "translate-x-[120%]" : "translate-x-[-360%]"}`}>
+                                        <div className={`w-[80%] flex flex-col gap-5 transition-all duration-500 ${flow === 1 ? "translate-x-[-126.25%]" : flow < 1 ? "translate-x-[120%]" : "translate-x-[-360%]"}`}>
                                             <div className="flex flex-col gap-3">
                                                 <label className="font-bold text-[12px]">
                                                     What is the temperature?
@@ -192,11 +192,11 @@ export default function Predict() {
                                             </div>
                                         </div>
                                         
-                                        <div className={`w-[80%] flex flex-col gap-5 duration-500 ${flow === 2 ? "translate-x-[-252.75%]" : flow < 2 ? "translate-x-[120%]" : "translate-x-[-360%]"}`}>
+                                        <div className={`w-[80%] flex flex-col gap-5 transition-all duration-500 ${flow === 2 ? "translate-x-[-252.75%]" : flow < 2 ? "translate-x-[120%]" : "translate-x-[-360%]"}`}>
                                             <PreservativeSelector selectedPreservatives={selectedPreservatives} onPreservativeChange={setSelectedPreservatives} cropType={values.cropType} />
                                         </div>
 
-                                        <div className={`w-[80%] flex flex-col gap-5 duration-500 ${flow === 3 ? "translate-x-[-378.75%]" : flow < 3 ? "translate-x-[120%]" : "translate-x-[-120%]"}`}>
+                                        <div className={`w-[80%] flex flex-col gap-5 transition-all duration-500 ${flow === 3 ? "translate-x-[-378.75%]" : flow < 3 ? "translate-x-[120%]" : "translate-x-[-120%]"}`}>
                                             <div className="bg-gray-500/[0.09] rounded-xl shadow-lg p-6 ">                                                
                                                 {prediction ? (
                                                 <div className="space-y-2 overflow-y-auto">
