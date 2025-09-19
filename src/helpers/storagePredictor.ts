@@ -164,7 +164,7 @@ export class EnhancedSpoilagePredictor {
     }
     
     // Quality impact
-    if (data.initialQuality < 5) {
+    if (data.initialQuality && data.initialQuality < 5) {
       probability += 0.2;
       days -= 8;
     }
