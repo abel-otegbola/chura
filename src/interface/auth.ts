@@ -4,10 +4,10 @@ export interface User {
 }
 // src/types/index.ts
 export interface EnvironmentalData {
-  temperature: number;
-  humidity: number;
+  temperature: number | string;
+  humidity: number | string;
   uvExposure?: 'high' | 'medium' | 'low' | 'none';
-  storageDuration: number;
+  storageDuration: number | string;
   cropType: string;
   storageType: string;
   pestPresence: boolean;

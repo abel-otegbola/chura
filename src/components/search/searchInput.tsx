@@ -18,7 +18,7 @@ export default function SearchInput({ className, disabled, name, value, onChange
     return (
         <div>
 
-            <div className={`flex items-center px-[13px] py-[10px] gap-2 relative rounded-[8px] lg:w-[287px] w-full border duration-500 
+            <div className={`flex items-center px-[13px] py-[12px] gap-2 relative rounded-[8px] lg:w-[287px] w-full border duration-500 
                 ${error && !focus ? "border-red-500 text-red-500 " : "border-[#A2A1A81A]"}
                 ${focus ? "border-primary dark:border-primary" : ""}
                 ${className}

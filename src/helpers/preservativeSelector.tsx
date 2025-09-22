@@ -52,7 +52,7 @@ const PreservativeSelector: React.FC<PreservativeSelectorProps> = ({
             className={`p-3 rounded-lg border text-left transition-all ${
               selectedPreservatives.includes(key)
                 ? 'border-secondary bg-secondary/[0.2]'
-                : 'border-gray-200/[0.2] hover:border-gray-300'
+                : 'border-gray-500/[0.2] hover:border-gray-300 bg-gray-500/[0.03]'
             }`}
           >
             <div className="font-medium">{preservative.name}</div>
@@ -64,8 +64,8 @@ const PreservativeSelector: React.FC<PreservativeSelectorProps> = ({
       </div>
 
       {selectedPreservatives.length > 0 && (
-        <div className="mt-4 p-4 bg-[#151515] rounded-lg border border-gray-500/[0.2]">
-          <h4 className="font-medium text-blue-900 mb-2">Selected Preservatives:</h4>
+        <div className="mt-4 p-4 bg-gray-500/[0.05] dark:bg-[#151515] rounded-lg border border-gray-500/[0.2]">
+          <h4 className="font-medium text-primary mb-2">Selected Preservatives:</h4>
           <div className="flex flex-wrap gap-2">
             {selectedPreservatives.map(preservative => {
               const preservativeData = traditionalPreservatives[preservative as keyof typeof traditionalPreservatives];

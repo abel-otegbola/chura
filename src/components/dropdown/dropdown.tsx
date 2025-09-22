@@ -13,7 +13,7 @@ interface dropdownProps {
     options?: (string | number)[];
     placeholder?: string
     variant?: "outlined" | "filled" | "standard",
-    lefticon?: ReactElement<Icon | IconProps>
+    lefticon?: ReactElement<Icon | IconProps>,
 }
 
 export default function Dropdown({
@@ -26,7 +26,8 @@ export default function Dropdown({
     onChange,
     error,
     variant = "outlined",
-    lefticon
+    lefticon,
+    placeholder
 }: dropdownProps) {
     const [focus, setFocus] = useState(false);
 
@@ -60,7 +61,7 @@ export default function Dropdown({
                     ${className}
                 `}
             >
-            { lefticon ? <span className={`${focus ? "text-secondary" : value !== "--select--" ? "text-secondary" : "text-gray-500"}`}>{lefticon}</span>: "" }
+            { lefticon ? <span className={`${focus ? "text-secondary" : value !== "" ? "text-secondary" : "text-gray-500"}`}>{lefticon}</span>: "" }
                 <select
                     className={`p-1 w-[96%] outline-none bg-transparent cursor-pointer
                         ${disabled ? "opacity-[0.25]" : ""}
@@ -74,7 +75,9 @@ export default function Dropdown({
                         onChange(e.target.value);
                     }}
                     disabled={disabled}
+                    aria-placeholder={placeholder}
                 >
+                    <option className="opacity-[0.7] flex gap-2 items-center dark:bg-[#101010] text-gray-500/[0.3]">{placeholder}</option>
                     {options?.map((option) => (
                         <option
                             className="flex gap-2 items-center dark:bg-[#101010]"
