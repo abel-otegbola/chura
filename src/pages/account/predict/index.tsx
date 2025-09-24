@@ -2,7 +2,6 @@ import { useState } from "react";
 import { List, Shield } from "@solar-icons/react";
 import { ClockIcon, OrangeIcon } from "@phosphor-icons/react";
 import Topbar from "../../../components/topbar/topbar";
-import Sidebar from "../../../components/sidebar/sidebar";
 import PredictorForm from "../../../components/predictorForm/predictorForm";
 
 export default function Predict() {
@@ -17,9 +16,7 @@ export default function Predict() {
     
 
     return (
-        <div className="flex">
-            <Sidebar />
-            <div className="flex-1 p-4">
+        <div className="">
                 
                 <Topbar heading="Crop analyzer" subText="Discover your crop condition and how to preserve"/>
                 <div className="border border-gray-500/[0.2] rounded-[10px] overflow-hidden">
@@ -57,7 +54,6 @@ export default function Predict() {
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     )
 }

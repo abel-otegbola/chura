@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "@phosphor-icons/react": "^2.1.10",
     "@solar-icons/react": "^1.0.1",
     "@tailwindcss/postcss": "^4.1.11",
@@ -17,6 +18,7 @@
     "@tensorflow/tfjs": "^4.22.0",
     "appwrite": "^20.0.0",
     "formik": "^2.4.6",
+    "nanoid": "^5.1.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-hot-toast": "^2.6.0",

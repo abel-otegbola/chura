@@ -49,7 +49,7 @@ export const traditionalPreservatives = {
     name: "Salt",
     crops: ["grains", "dried vegetables", "fish", "meat"],
     effectiveness: 0.70,
-    application: "2-5% of crop weight",
+    application: "2-5% of product weight",
     benefits: ["Moisture absorption", "Preservative"],
     limitations: ["Affects taste", "Requires dry conditions"],
     scientificBasis: "Reduces water activity to inhibit microbial growth"

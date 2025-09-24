@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Register from "./pages/auth/register"
 import AuthProvider from "./contexts/AuthContext"
 import Predict from "./pages/account/predict"
+import Account from "./pages/account"
 const Login = lazy(() => import('./pages/auth/login'))
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
                   <Route path='/' element={<Predict />} />
                   <Route path='/login' element={<Login />} />
                   <Route path='/register' element={<Register />} />
+                  <Route path='/account/*' element={<Account />} />
               </Routes>
             </div>
         </AuthProvider>

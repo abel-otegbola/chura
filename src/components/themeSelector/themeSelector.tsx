@@ -38,17 +38,14 @@ function ThemeSelector() {
         } else {
             document.documentElement.classList.remove('dark')
         }
-        if(!localStorage.theme) {
-            setTheme("System")
-        }
     }, [theme])
 
     return (
-        <button >                      
+        <button onClick={() => setTheme(theme === "System" ? "light" : theme === "light" ? "dark" : "System" )}  >                      
             {
             themes.map(item => {
                 return (
-                    <span key={item.id} className={`relative text-[20px] ${item.title === theme ? "block" : "hidden"}`} aria-label={"Theme setting changed to "+ theme} onClick={() => setTheme(item.title === "System" ? "light" : item.title === "light" ? "dark" : "System" )} >{item.img}</span>
+                    <span key={item.id} className={`relative text-[20px] ${item.title === theme ? "block" : "hidden"}`} aria-label={"Theme setting changed to "+ theme} >{item.img}</span>
                 )
             })}
         </button>
