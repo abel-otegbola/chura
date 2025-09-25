@@ -17,7 +17,7 @@ function Sidebar() {
     const generalLinks: Link[] = [
         { id: 0, label: "Overview", icon: <Home size={20}/>, link: "/account/overview" },
         { id: 1, label: "Predictor", icon: <RobotIcon size={20}/>, link: "/account/predictor" },
-        { id: 1, label: "Storage", icon: <SmartHome size={20}/>, link: "/account/storage" },
+        { id: 2, label: "Storage", icon: <SmartHome size={20}/>, link: "/account/storage" },
     ]
     const modalRef = useOutsideClick(setOpen, false)
 

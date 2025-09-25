@@ -146,13 +146,13 @@ export class EnhancedSpoilagePredictor {
     let days = 30;
     
     // Temperature impact
-    if (data.temperature > 30 || data.temperature < 10) {
+    if (+data.temperature > 30 || +data.temperature < 10) {
       probability += 0.3;
       days -= 10;
     }
     
     // Humidity impact
-    if (data.humidity > 70) {
+    if (+data.humidity > 70) {
       probability += 0.2;
       days -= 5;
     }
@@ -170,8 +170,8 @@ export class EnhancedSpoilagePredictor {
     }
     
     // Duration impact
-    probability += Math.min(data.storageDuration / 100, 0.5);
-    days -= data.storageDuration / 5;
+    probability += Math.min(+data.storageDuration / 100, 0.5);
+    days -= +data.storageDuration / 5;
     
     // Clamp values
     probability = Math.min(Math.max(probability, 0), 1);
@@ -182,10 +182,10 @@ export class EnhancedSpoilagePredictor {
     else if (probability > 0.4) alertLevel = 'medium';
     
     const recommendations: string[] = [];
-    if (data.temperature > 30) {
+    if (+data.temperature > 30) {
       recommendations.push('Reduce storage temperature below 25°C');
     }
-    if (data.humidity > 70) {
+    if (+data.humidity > 70) {
       recommendations.push('Improve ventilation or use dehumidifiers');
     }
     if (data.pestPresence) {
