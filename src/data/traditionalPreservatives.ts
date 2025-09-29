@@ -2,7 +2,7 @@
 export const traditionalPreservatives = {
   cloves: {
     name: "Cloves",
-    crops: ["maize", "beans", "rice", "cassava", "fish", "meat"],
+    crops: ["fish", "meat", "maize", "beans", "rice", "cassava"],
     effectiveness: 0.75, // 75% reduction in spoilage
     application: "5-10 cloves per 50kg bag",
     benefits: ["Antifungal", "Insect repellent", "Natural"],
