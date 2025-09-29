@@ -14,7 +14,7 @@ function StorageForm() {
             <Topbar heading="Preservation" subText="Discover best preservatives for your product"/>
         <div className="flex-1 md:flex dark:bg-[#151515] bg-gray-500/[0.04] mb-4 md:mr-4 rounded-[10px] overflow-hidden">
 
-            <div className="md:w-[75%] w-full flex items-center">
+            <div className="w-full flex items-center">
                 <div className="sm:w-[550px] mx-auto w-full md:p-6 p-4 py-[10%]">
                     
                     <div className="flex flex-col justify-center gap-6">
