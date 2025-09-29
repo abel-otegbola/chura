@@ -33,7 +33,7 @@ const PreservativeRecommendation: React.FC<PreservativeRecommendationProps> = ({
 
   // Access your API key (see "Set up your API key" above)
   const genAI = new GoogleGenerativeAI(API_KEY);
-  const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash-live" });
+  const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
   const getAIRecommendations = async (): Promise<Recommendation[]> => {
     if (!cropType) return [];
