@@ -27,7 +27,6 @@ export default function Input({ onChange, error, ...props }: inputProps) {
                 ${props.className}
                 ${variants[props.variant || 'default']}
             `}>
-            { props.label ? <label htmlFor={props.name} className={`absolute left-[28px] dark:bg-[#101010] bg-white p-[2px] px-2 font-light duration-700 ${focus ? "text-[#13c962] -top-[11px] text-[11px]" : props.value !== "" ? "-top-[11px] text-[11px] text-gray-500" : "text-gray-500 top-[10px] text-[14px]"}`}>{props.label}</label> : "" }
             { props.lefticon ? <span className={`${focus ? "text-secondary" : props.value !== "" ? "text-secondary" : "text-gray-500"}`}>{props.lefticon}</span>: "" }
                 <input 
                     className={`w-full outline-none bg-transparent text-[14px]

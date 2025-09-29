@@ -8,27 +8,26 @@ export default function Predict() {
     const [flow, setFlow] = useState(0)
 
     const data = [
-        { title: "Crop profile", text: "What are you preserving today?", icon: <OrangeIcon /> },
-        { title: "Quality control", text: "Current environment of your crop", icon: <Shield /> },
-        { title: "Traditional preservatives", text: "Select the preservations you use?", icon: <ClockIcon /> },
-        { title: "Get recommendations", text: "Predict spoilage and optimal selling time", icon: <List /> },
+        { title: "Product profile", text: "What are you preserving today?", icon: <OrangeIcon size={16} /> },
+        { title: "Quality control", text: "Current environment of your crop", icon: <Shield size={16} /> },
+        { title: "Traditional preservatives", text: "Select the preservations you use?", icon: <ClockIcon size={16} /> },
+        { title: "Get recommendations", text: "Predict spoilage and optimal selling time", icon: <List size={16} /> },
     ]
     
 
     return (
-        <div className="">
+        <div className="flex flex-col w-full h-full">
                 
                 <Topbar heading="Crop analyzer" subText="Discover your crop condition and how to preserve"/>
-                <div className="border border-gray-500/[0.2] rounded-[10px] overflow-hidden">
-                    <div className="flex-1 px-2 dark:bg-[#151815] bg-gray-200/[0.09] border-b border-gray-500/[0.1]">
-                        <div className="grid grid-cols-4 md:items-start md:justify-center justify-between h-full w-full md:p-[3%] p-4 md:gap-4 gap-4 rounded-[10px] text-white">
+                <div className="flex-1 md:flex dark:bg-[#151515] bg-gray-500/[0.04] mb-4 md:mr-4 rounded-[10px] overflow-hidden">
+                    <div className="flex-1 dark:bg-[#151515]">
+                        <div className="md:flex hidden md:flex-col md:gap-[40px] gap-4 md:items-start md:justify-start justify-between dark:bg-gray-500/[0.05] h-full w-full md:px-[10%] md:py-[25%] p-4 md:gap-4 gap-4 text-white">
                             {
                                 data.map((item, i )=> (
-                                    <div key={item.title} className={`flex w-full gap-2 items-start justify-start ${flow >= i ? "text-[#13c962]" : "text-gray-500"}`}>
+                                    <div key={item.title} className={`flex md:w-full gap-2 items-start justify-start ${flow >= i ? "text-[#13c962]" : "text-gray-500"}`}>
                                         <div className={`flex items-center justify-center rounded-full min-w-[40px] h-[40px] w-[40px] ${flow >= i ? "bg-[#13c962] dark:text-dark text-white" : " bg-gray-200/[0.12] border border-gray-500/[0.1]"}`}>{item.icon}</div>
                                         <div className={`flex-col gap-1 md:w-auto ${flow === i ? "flex justify-center" : "md:flex hidden"}`}>
-                                            <p className={`text-[10px] md:hidden`}>{flow + 1}/{data.length}</p>
-                                            <h1 className="font-semibold md:text-[12px] text-[10px]">{item.title}</h1>
+                                            <h1 className="font-semibold md:block hidden">{item.title}</h1>
                                             <p className={`text-[10px] md:block hidden`}>{item.text}</p>
                                         </div>
                                     </div>
@@ -37,8 +36,8 @@ export default function Predict() {
                         </div>
                     </div>
 
-                    <div className="w-full">
-                        <div className="sm:w-[550px] mx-auto w-full p-6 py-[7%]">
+                    <div className="md:w-[75%] w-full flex items-center">
+                        <div className="sm:w-[550px] mx-auto w-full md:p-6 p-4 py-[7%]">
                             
                             <div className="flex flex-col justify-center gap-6 md:px-[5%]">
                                 <div className="">

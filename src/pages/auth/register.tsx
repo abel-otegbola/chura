@@ -29,7 +29,7 @@ export default function Register() {
           <div className="flex flex-col justify-center gap-6 md:p-[5%] md:py-[5%] py-[80px]">
             <div>
               <h1 className="font-semibold md:text-[30px] text-[24px] text-dark-500">Create Your Account</h1>
-              <p className="text-gray-500">Sign up to get started with Wrenchlar</p>
+              <p className="text-gray-500">Sign up to get started with Chura</p>
             </div>
             <Formik
               initialValues={{ email: "", password: "" }}

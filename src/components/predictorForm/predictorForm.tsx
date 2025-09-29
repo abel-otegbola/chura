@@ -63,7 +63,7 @@ function PredictorForm({ flow, setFlow }: { flow: number, setFlow: (flow: number
                     <div className={`w-[80%] flex flex-col gap-5 py-2 transition-all duration-500 ${flow === 0 ? "opacity-[1] translate-x-[0]" : "opacity-0 translate-x-[-480%]"}`}>
                         <div className="flex flex-col gap-1">
                             <label className="font-bold text-[12px]">
-                                What agricultural commodity are you preserving?
+                                What agricultural product are you preserving?
                             </label>
                             <Dropdown
                                 name="cropType"
@@ -91,7 +91,7 @@ function PredictorForm({ flow, setFlow }: { flow: number, setFlow: (flow: number
                         </div>
                         <div className="flex flex-col gap-3">
                             <label className="font-bold text-[12px]">
-                                How long have you stored it?
+                                How long have you stored it (days)?
                             </label>
                             <Input
                                 name="storageDuration"
@@ -107,7 +107,7 @@ function PredictorForm({ flow, setFlow }: { flow: number, setFlow: (flow: number
                     <div className={`w-[80%] flex flex-col gap-5 transition-all duration-500 ${flow === 1 ? "translate-x-[-126.5%] opacity-[1]" : flow < 1 ? "opacity-0 translate-x-[120%]" : "opacity-0 translate-x-[-360%]"}`}>
                         <div className="flex flex-col gap-3">
                             <label className="font-bold text-[12px]">
-                                What is the temperature?
+                                What is the current temperature?
                             </label>
                             <Input 
                                 name="temperature"
@@ -153,7 +153,7 @@ function PredictorForm({ flow, setFlow }: { flow: number, setFlow: (flow: number
                     </div>
 
                     <div className={`w-[80%] flex flex-col gap-5 transition-all duration-500 ${flow === 3 ? "translate-x-[-380%] opacity-[1]" : flow < 3 ? "opacity-0 translate-x-[120%]" : "opacity-0 translate-x-[-120%]"}`}>
-                        <div className="dark:bg-gray-500/[0.09] border border-gray-500/[0.2] rounded-xl p-6 ">                                                
+                        <div className="dark:bg-gray-500/[0.09] bg-white border border-gray-500/[0.2] rounded-xl p-6 ">                                                
                             {prediction ? (
                             <div className="space-y-4 overflow-y-auto">
                                 <div className="grid grid-cols-2 gap-2">
@@ -216,7 +216,7 @@ function PredictorForm({ flow, setFlow }: { flow: number, setFlow: (flow: number
                 </div>
 
 
-                <div className="flex justify-end gap-8">
+                <div className="flex justify-end gap-4">
                     {
                         flow > 0 ?
                         <button tabIndex={1} onClick={(e) => {setFlow(flow -1); e.preventDefault()}} className="px-6 py-2 border border-gray-300 cursor-pointer rounded-[8px]">

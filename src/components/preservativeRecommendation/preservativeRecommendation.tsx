@@ -33,7 +33,7 @@ const PreservativeRecommendation: React.FC<PreservativeRecommendationProps> = ({
 
   // Access your API key (see "Set up your API key" above)
   const genAI = new GoogleGenerativeAI(API_KEY);
-  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+  const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
   const getAIRecommendations = async (): Promise<Recommendation[]> => {
     if (!cropType) return [];
@@ -56,7 +56,10 @@ const PreservativeRecommendation: React.FC<PreservativeRecommendationProps> = ({
         }
       ]
       
-      Include both traditional (natural/botanical) with cloves extract, garlic etc as preferences due to availability and mixing them (e.g clove + drying) and modern (synthetic/technological) methods.
+      Include both traditional (natural/botanical) with cloves extract, neem leaves, tumeric, garlic etc as preferences due to availability and mixing them (e.g clove + drying)
+       and modern (synthetic/technological) methods.
+       i have tested the clove extracts using 20g/L, 40g/L and 60g/L of water togehter with drying and addition of salts.I discovered the optimal clove concentration is 40g/L with better antimicrobial effect and safe for human consumption. I did tests such as peroxide value, microbial test, shrinkage, sensory analysis and TVBN. 60g/L gave darker color and more clove smell revealing higher concentration might affect human health. The drying temperature i analyzed where 70degrees, 80degrees and 90degrees with the 90 being the best.
+       Just based on other data also, provide the best recommendations which doesn't necessarily have to align with mine 
       Prioritize methods suitable for the given environmental conditions.
     `;
 
@@ -148,7 +151,7 @@ const PreservativeRecommendation: React.FC<PreservativeRecommendationProps> = ({
         Preservative Recommendations for {cropType.charAt(0).toUpperCase() + cropType.slice(1)}
       </h3>
       
-      <div className="grid md:grid-cols-2 gap-4">
+      <div className="grid gap-4">
       {traditionalRecs.length > 0 && (
         <div>
           <h4 className="font-semibold text-[12px] mb-2 flex items-center gap-1">

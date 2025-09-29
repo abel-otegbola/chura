@@ -12,9 +12,9 @@ function ThemeSelector() {
     const [theme, setTheme] = useState("")
 
     const themes: Themes = [
-        { id: 0, img: <DeviceTabletSpeakerIcon />, title: "System" },
-        { id: 1, img: <SunIcon />, title: "light" },
-        { id: 2, img: <MoonIcon />, title: "dark" },
+        { id: 0, img: <DeviceTabletSpeakerIcon size={20} />, title: "System" },
+        { id: 1, img: <SunIcon size={20} />, title: "light" },
+        { id: 2, img: <MoonIcon  size={20}/>, title: "dark" },
     ]
     useEffect(() => {
         if(theme === 'light') {
@@ -41,14 +41,23 @@ function ThemeSelector() {
     }, [theme])
 
     return (
-        <button onClick={() => setTheme(theme === "System" ? "light" : theme === "light" ? "dark" : "System" )}  >                      
-            {
-            themes.map(item => {
-                return (
-                    <span key={item.id} className={`relative text-[20px] ${item.title === theme ? "block" : "hidden"}`} aria-label={"Theme setting changed to "+ theme} >{item.img}</span>
-                )
-            })}
-        </button>
+        <div className="flex items-center gap-1 dark:bg-gray-500/[0.1] bg-gray-500/[0.03] p-1 rounded-[8px]">
+        {
+            themes.map(item => (
+                <button 
+                    key={item.id} 
+                    onClick={() => setTheme(item.title)} 
+                    className={`p-2 dark:bg-gray-500/[0.05] bg-gray-500/[0.03] rounded relative text-[20px] ${item.title === theme ? "text-secondary" : "text-gray-500"}`} 
+                    aria-label={"Theme setting changed to "+ theme} 
+                >                      
+            
+                    <span >{item.img}</span>
+                        
+                </button>
+            ))
+        }
+        </div>
+        
     )
 }
 

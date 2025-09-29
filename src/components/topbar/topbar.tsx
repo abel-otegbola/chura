@@ -1,6 +1,4 @@
-import { Bell } from "@solar-icons/react";
 import SearchInput from "../../components/search/searchInput";
-import { Link } from "react-router-dom";
 import ThemeSelector from "../themeSelector/themeSelector";
 
 function Topbar({ heading, subText }: { heading: string, subText: string }) {
@@ -13,13 +11,8 @@ function Topbar({ heading, subText }: { heading: string, subText: string }) {
             </div>
             <div className="flex items-center gap-4">
                 <SearchInput placeholder="Search" className="sm:flex hidden md:hidden lg:flex" />
-                <Link to={"/account/notifications"} className="p-[12px] rounded-[10px] bg-[#A2A1A81A] hover:bg-gray-500/[0.06]">
-                    <Bell size={20} color="currentColor" weight="Outline" />
-                </Link>
                 {/* <UserMenu /> */}
-                <button className="p-[12px] flex items-center justify-center rounded-[10px] bg-[#A2A1A81A] hover:bg-gray-500/[0.06]">
-                    <ThemeSelector />
-                </button>
+                <ThemeSelector />
             </div>
         </div>
     )

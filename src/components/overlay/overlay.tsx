@@ -34,8 +34,8 @@ function AuthOverlay() {
         className="flex items-center px-[20%] py-[10%] bg-cover lg:bg-center bg-bottom h-full w-full rounded-[25px]"
       >
         <div className="flex flex-col gap-6 justify-between text-white w-full h-full">
-          <div className="flex flex-col gap-1">
-            <LogoIcon className="text-primary" />
+          <div className="flex flex-col gap-1 text-white">
+            <LogoIcon className="text-white" />
             <p>Preserving the future of agriculture by combining traditional and modern methodologies, leveraging AI Solutions</p>
           </div>
 
