@@ -13,7 +13,7 @@ export interface buttonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export default function Button({ variant, className, href, size, disabled, onClick, children, ...props }: buttonProps) {
     const variants = {
-        primary: "hover:bg-primary/[0.8] bg-primary text-white border border-primary",
+        primary: "hover:bg-[#111] bg-[#253312] text-white border border-primary",
         secondary: "hover:bg-primary/[0.2] border border-gray-500/[0.3] text-black",
         tertiary: "rounded-[4px]"
     }
@@ -22,7 +22,7 @@ export default function Button({ variant, className, href, size, disabled, onCli
        <>
             { 
             href ? 
-                <Link role="button" to={href} className={`rounded-[10px] flex items-center justify-center md:gap-2 gap-1 w-fit 
+                <Link role="button" to={href} className={`rounded-[10px] flex items-center justify-center md:gap-2 gap-1 w-fit text-[15px] cursor-pointer 
                     ${variants[variant || "primary"]} 
                     ${disabled ? "opacity-[0.25]" : ""} 
                     ${size === "xs" ? "rounded-[2px] text-[8px] py-[2px] md:px-[8px] px-[4px]" : size === "small" ? "rounded text-[12px] py-[4px] md:px-[12px] px-[8px]" : size === "large" ? "rounded-[12px] md:py-[16px] py-[10px] md:px-[32px] px-[28px]" : "rounded-[8px] py-[8px] md:px-[16px] px-[12px]"} 
@@ -31,7 +31,7 @@ export default function Button({ variant, className, href, size, disabled, onCli
                     { children }
                 </Link>
 
-                : <button className={` duration-500 flex items-center justify-center md:gap-2 gap-1 w-fit cursor-pointer
+                : <button className={` duration-500 flex items-center justify-center md:gap-2 gap-1 w-fit text-[15px] cursor-pointer 
                     ${variants[variant || "primary"]} 
                     ${disabled ? "opacity-[0.25]" : ""} 
                     ${size === "xs" ? "rounded-[2px] text-[8px] py-[2px] md:px-[8px] px-[4px]" : size === "small" ? "rounded text-[12px] py-[4px] md:px-[12px] px-[8px]" : size === "large" ? "rounded-[12px] md:py-[16px] py-[10px] md:px-[32px] px-[28px]" : "rounded-[8px] py-[8px] md:px-[16px] px-[12px]"} 

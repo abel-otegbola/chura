@@ -11,7 +11,7 @@ function App() {
   return (
     <BrowserRouter>
         <AuthProvider>
-            <div className="dark:bg-[#101010] bg-white dark:text-white/[0.8] 2xl:text-[16px] text-[14px] max-w-[420px]:text-[14px]">
+            <div className="dark:bg-[#101010] bg-white dark:text-white/[0.8] xl:text-[20px] md:text-[17px] text-[15px] max-w-[420px]:text-[14px]">
               <Routes>
                   <Route path='/' element={<Home />} />
                   <Route path='/login' element={<Login />} />
