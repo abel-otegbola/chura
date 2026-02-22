@@ -3,6 +3,7 @@ import Sidebar from "../../components/sidebar/sidebar";
 import Predict from "./predict";
 import StorageForm from "./storage";
 import StorageResult from "./result";
+import ProducePage from "./produce";
 
 export default function Account() {
     // const { user } = useContext(AuthContext);
@@ -22,6 +23,7 @@ export default function Account() {
                             <Route path="/predictor" element={<Predict />} />
                             <Route path="/storage" element={<StorageForm />} />
                             <Route path="/storage/result" element={<StorageResult />} />
+                            <Route path="/produce" element={<ProducePage />} />
                         </Routes>
                     </div>
                 </div>

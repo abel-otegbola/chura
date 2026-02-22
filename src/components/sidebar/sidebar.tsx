@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import LogoIcon from "../../assets/icons/logo";
 import { useOutsideClick } from "../../customHooks/useOutsideClick";
 import { HamburgerMenu, SmartHome, type IconProps } from "@solar-icons/react";
-import { RobotIcon, type Icon } from "@phosphor-icons/react";
+import { RobotIcon, type Icon, ListDashes } from "@phosphor-icons/react";
 import CloseIcon from "../../assets/icons/close";
 
 export interface Link {
@@ -18,6 +18,7 @@ function Sidebar() {
         // { id: 0, label: "Overview", icon: <Home size={20}/>, link: "/account/overview" },
         { id: 1, label: "Spoilage Prediction", icon: <RobotIcon size={20}/>, link: "/account/predictor" },
         { id: 2, label: "Preservation", icon: <SmartHome size={20}/>, link: "/account/storage" },
+        { id: 3, label: "Produce Tracking", icon: <ListDashes size={20}/>, link: "/account/produce" },
     ]
     const modalRef = useOutsideClick(setOpen, false)
 
